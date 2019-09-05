@@ -1,5 +1,6 @@
 body{
     display: grid;
+    font-family: 'Kalam', cursive;
     grid-template-areas: "navbar"
                          "banner"
                          "main"
@@ -23,11 +24,15 @@ nav{
     justify-content: space-between;
     padding: 0 10px;
 }
-nav div{
+nav div:nth-child(2){
     display: flex;
     flex-direction: column;
     height: 20px;
     justify-content: space-between;
+}
+
+nav div:nth-child(3){
+    display: none;
 }
 nav div span{
     background-color: black;
@@ -42,10 +47,43 @@ section {
     align-items: center;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     grid-area: section;
 }
 
-.funcionarios div img {
+section .funcionarios{
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+
+}
+section .funcionarios div img {
     width: 100px;
+}
+
+@media(min-width: 580px){
+body {
+    background-image: url()
+}
+nav div a{
+    font-size: 14pt;
+    text-decoration: none;
+}
+nav div:nth-child(2){
+    display: none;
+}
+
+nav div:nth-child(3){
+    display: block;
+}
+    section .funcionarios{
+        flex-direction: row;
+        flex: wrap;
+        justify-content: space-around;
+        width: 100vw;
+    }
+}
+
+@media(min-widht:710){
+    header: 
 }
