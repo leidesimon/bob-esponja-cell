@@ -1,10 +1,33 @@
 body{
     display: grid;
-    grid-template-areas: "nav"
-                         " banner"
+    grid-template-areas: "navbar"
+                         "banner"
                          "main"
                          "section"
                          "footer";
 grid-template-columns: 99.7vw;
+margin: 0px;
 }
-
+nav{
+    align-items: center;
+    background-color: #c27be0;
+    grid-area: navbar;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+nav div{
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+}
+nav div span{
+    background-color: black;
+    height: 5px; 
+    width: 30px;
+}
+nav img{
+    width: 35px;
+}
